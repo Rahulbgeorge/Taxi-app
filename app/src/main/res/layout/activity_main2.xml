@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:googleplace="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rahulstudy.taximap.Main2Activity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/map_container2"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/route"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="@android:color/black"
+                android:onClick="router"
+                android:text="Route"
+                android:textColor="@android:color/white"
+              />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="156dp"
+            android:background="@drawable/white_border"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/relLayout1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.597"
+            googleplace:layout_constraintEnd_toEndOf="parent"
+            googleplace:layout_constraintStart_toStartOf="parent"
+            googleplace:layout_constraintTop_toTopOf="parent">
+
+            <co.geeksters.googleplaceautocomplete.lib.CustomAutoCompleteTextView
+                android:id="@+id/atv_places1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/imageView"
+                android:background="@android:color/transparent"
+                android:hint="Destination"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                googleplace:delay="600"
+                googleplace:key="AIzaSyCwkoMXTW-JgRBBHOWG4jyt9e75r5Sx5BQ" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/places_ic_search" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="373dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/white_border"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ic_magnify"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/places_ic_search" />
+
+            <EditText
+                android:id="@+id/input_search1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ic_magnify"
+                android:background="@null"
+                android:hint="My Location"
+                android:imeOptions="actionSearch"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/map_container2"
+            android:layout_width="0dp"
+            android:layout_height="506dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </FrameLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/bookingbutton"
+        android:layout_width="0dp"
+        android:layout_height="59dp"
+        android:background="@android:color/black"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            android:text="Book"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

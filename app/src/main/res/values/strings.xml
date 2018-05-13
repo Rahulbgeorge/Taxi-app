@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">taxiMap</string>
+    <string name="title_activity_map">Map</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_mapactivitytest1">Mapactivitytest1</string>
+
+    <string name="title_activity_fullscreen_map">FullscreenActivityMap</string>
+    <string name="title_activity_main3">Main3Activity</string>
+</resources>
